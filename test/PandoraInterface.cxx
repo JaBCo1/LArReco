@@ -18,6 +18,7 @@
 #include "larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h"
 #include "larpandoracontent/LArPlugins/LArRotationalTransformationPlugin.h"
 
+#include "MyTrackShowerIdAlgorithm.h"
 #include "PandoraInterface.h"
 
 #ifdef MONITORING
@@ -84,6 +85,9 @@ void CreatePandoraInstances(const Parameters &parameters, const Pandora *&pPrima
     pPrimaryPandora = new Pandora();
     PANDORA_THROW_RESULT_IF(STATUS_CODE_SUCCESS, !=, LArContent::RegisterAlgorithms(*pPrimaryPandora));
     PANDORA_THROW_RESULT_IF(STATUS_CODE_SUCCESS, !=, LArContent::RegisterBasicPlugins(*pPrimaryPandora));
+
+    PANDORA_THROW_RESULT_IF(STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPrimaryPandora,
+	 "MyTrackShowerIdAlgorithm", new MyTrackShowerIdAlgorithm::Factory));
 
     if (!pPrimaryPandora)
         throw StatusCodeException(STATUS_CODE_FAILURE);

@@ -1,0 +1,4 @@
+/home/epp/phuznm/Documents/Pandora/LArReco/lib/libLArReco.so.03.15.04
+/home/epp/phuznm/Documents/Pandora/LArReco/lib/libLArReco.so.03.15
+/home/epp/phuznm/Documents/Pandora/LArReco/lib/libLArReco.so
+/home/epp/phuznm/Documents/Pandora/LArReco/bin/PandoraInterface
