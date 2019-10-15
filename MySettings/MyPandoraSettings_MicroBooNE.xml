@@ -50,12 +50,12 @@
         <PfoListName>RecreatedPfos</PfoListName>
         <MinHitsForDisplay>0</MinHitsForDisplay>
     </algorithm>
-
+<!--
     <algorithm type = "MyTrackShowerIdAlgorithm">
         <OutputTree>MyTree</OutputTree>
         <OutputFile>MyRootFile.root</OutputFile>
     </algorithm>
-
+-->
     <algorithm type = "LArEventValidation">
         <CaloHitListName>CaloHitList2D</CaloHitListName>
         <MCParticleListName>Input</MCParticleListName>
@@ -70,7 +70,7 @@
 
     <algorithm type = "LArVisualMonitoring">
         <ShowCurrentPfos>true</ShowCurrentPfos>
+	<MCParticleListNames>Input</MCParticleListNames>
         <ShowDetector>true</ShowDetector>
-        <MCParticleListNames>Input</MCParticleListNames>
     </algorithm>
 </pandora>
